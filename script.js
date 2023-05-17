@@ -1,4 +1,4 @@
-// Function to encrypt plain text using Caesar cipher with autokey algorithm
+
 function encrypt() {
     var inputText = document.getElementById('inputText').value;
     var shift = parseInt(prompt('Enter the shift (a number between 1 and 25):'));
@@ -20,7 +20,7 @@ function encrypt() {
     document.getElementById('outputText').value = encryptedText;
   }
   
-  // Function to decrypt cipher text using Caesar cipher with autokey algorithm
+
   function decrypt() {
     var inputText = document.getElementById('inputText').value;
     var shift = parseInt(prompt('Enter the shift (a number between 1 and 25):'));
@@ -42,7 +42,7 @@ function encrypt() {
     document.getElementById('outputText').value = decryptedText;
   }
   
-  // Function to encrypt plain text using Caesar cipher with symmetric algorithm
+
 function encrypt() {
     var inputText = document.getElementById('inputText').value;
     var key = parseInt(prompt('Enter the encryption key (a number between 1 and 25):'));
@@ -59,8 +59,7 @@ function encrypt() {
     
     document.getElementById('outputText').value = encryptedText;
   }
-  
-  // Function to decrypt cipher text using Caesar cipher with symmetric algorithm
+
   function decrypt() {
     var inputText = document.getElementById('inputText').value;
     var key = parseInt(prompt('Enter the decryption key (a number between 1 and 25):'));

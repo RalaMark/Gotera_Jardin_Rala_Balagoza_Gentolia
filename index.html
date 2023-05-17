@@ -1,0 +1,138 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Caesar Cipher with Auto Key Algorithm</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    textarea {
+      width: 400px;
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="">Caesar Cipher with Auto Key Algorithm</h1>
+  <label for="plaintext">Plaintext:</label><br>
+  <textarea id="plaintext"></textarea><br>
+  <label for="shift">Shift:</label>
+  <input type="number" id="shift" min="1" max="25" value="3"><br>
+  <button onclick="encrypt()">Encrypt</button>
+  <button onclick="decrypt()">Decrypt</button><br>
+  <label for="ciphertext">Ciphertext:</label><br>
+  <textarea id="ciphertext"></textarea>
+
+  <script>
+    function encrypt() {
+      var plaintext = document.getElementById('plaintext').value;
+      var shift = parseInt(document.getElementById('shift').value);
+      var ciphertext = '';
+
+      for (var i = 0; i < plaintext.length; i++) {
+        var charCode = plaintext.charCodeAt(i);
+        var encryptedChar;
+
+        if (i < shift) {
+          encryptedChar = String.fromCharCode((charCode - 65 + shift) % 26 + 65);
+        } else {
+          encryptedChar = String.fromCharCode((charCode - 65 + plaintext.charCodeAt(i - shift) - 65) % 26 + 65);
+        }
+
+        ciphertext += encryptedChar;
+      }
+
+      document.getElementById('ciphertext').value = ciphertext;
+    }
+
+    function decrypt() {
+      var ciphertext = document.getElementById('ciphertext').value;
+      var shift = parseInt(document.getElementById('shift').value);
+      var plaintext = '';
+
+      for (var i = 0; i < ciphertext.length; i++) {
+        var charCode = ciphertext.charCodeAt(i);
+        var decryptedChar;
+
+        if (i < shift) {
+          decryptedChar = String.fromCharCode((charCode - 65 - shift + 26) % 26 + 65);
+        } else {
+          decryptedChar = String.fromCharCode((charCode - 65 - plaintext.charCodeAt(i - shift) + 65) % 26 + 65);
+        }
+
+        plaintext += decryptedChar;
+      }
+
+      document.getElementById('plaintext').value = plaintext;
+    }
+  </script>
+</body>
+</html
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+   <title>Caesar Cipher with Symmetric Algorithm</title>
+   <style>
+     body {
+       font-family: Arial, sans-serif;
+       text-align: center;
+       background-color: lightblue;
+       font-size: 20px;
+     }
+     h1 {
+       margin-bottom: 20px;
+     }
+     textarea {
+       width: 300px;
+       height: 150px;
+       margin-bottom: 10px;
+       font-size: 25px;
+
+     }
+     button{
+
+      color: white;
+      font-size: 30px;
+      background-color: black;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+     }
+     button:hover{
+      color: red;
+     }
+     #inputText{
+      background-color: aqua;
+     }
+     #inputText:hover
+     {
+      background-color: antiquewhite;
+      color: black;
+     }
+     #outputText{
+
+      background-color: white;
+
+     }
+     #outputText:hover{
+
+      background-color: black;
+      color: white;
+     }
+    
+
+     
+  
+   </style>
+ </head>
+ <body>
+   <h1>Caesar Cipher with Symmetric Algorithm</h1>
+   
+   <textarea id="inputText" placeholder="Enter text to encrypt or decrypt"></textarea><br>
+   <button onclick="encrypt()">Encrypt</button>
+   <button onclick="decrypt()">Decrypt</button><br>
+   <textarea id="outputText" placeholder="Results" readonly></textarea>
+
+   <script src="script.js"></script>
+ </body>
+ </html>
+ 
